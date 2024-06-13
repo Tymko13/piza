@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +25,7 @@
                 </div>
             </div>
         </header>
-        <section>
+        <section id="pizza-window">
             <div id="all-pizzas">
                 <h1>УСІ ПІЦИ</h1>
                 <div class="circle-num">8</div>
@@ -81,7 +81,7 @@
                 </section>
                 <section class="pizza-section">
                     <img class="full-pizza" src="assets/pizza_1.jpg" alt="Вид згори на запашну піцу">
-                    <h2 class="pizza-name">Міксований поло</h2>
+                    <h2 class="pizza-name">Мікс поло</h2>
                     <h3 class="pizza-properties">М'ясна піца з ананасами</h3>
                     <p class="pizza-ingredients">Шинка, курка копчена, сир моцарела, ананаси, кукурудза, петрушка, соус томатний</p>
                     <div class="pricing">
@@ -146,45 +146,45 @@
             <p id="author">Виконав: Кондрашов Тимофій Романович</p>
         </footer>
     </main>
-    <div id="special-offer">
-        <img src="assets/discount.svg" alt="">
-        <p>Цього тижня на все</p>
-        <p id="discount">-20%</p>
-    </div>
-    <aside id="order">
+    <aside>
         <div id="order-header">
-            <div>
+            <div id="order-name">
                 <h4>Замовлення</h4>
-                <div id="order-num">1</div>
+                <div class="circle-num" id="order-num">1</div>
             </div>
             <button id="clear-order-button">Очистити замовлення</button>
         </div>
         <div id="order-list">
             <section class="order-item">
                 <div class="order-item-info">
-                    <h2 class="pizza-name">BBQ (Мала)</h2>
-                    <div>
-                        <p class="diameter"></p>
-                        <p class="weight"></p>
+                    <h4 class="pizza-name">BBQ (Мала)</h4>
+                    <div class="pizza-size">
+                        <p class="diameter">&empty; 30</p>
+                        <p class="weight">&#9878; 460</p>
                     </div>
                     <div class="act">
                         <p>556грн</p>
-                        <button class="dec">-</button>
+                        <button class="dec">&#8722;</button>
                         <p class="order-item-num">4</p>
                         <button class="inc">+</button>
-                        <button class="delete-order-item-button">&cross;</button>
+                        <button class="delete-order-item-button">&#10539;</button>
                     </div>
                 </div>
                 <img class="order-pic" src="assets/pizza_2.jpg" alt="Вид згори на половину запашної піци">
             </section>
         </div>
-        <div id="order-comfirm">
+        <div id="order-confirm">
             <div id="full-order-info">
                 <p>Сума замовлення</p>
-                <p id="order-sum">556грн</p>
+                <p id="order-sum">556 грн</p>
             </div>
             <button id="order-confirm-button">Замовити</button>
         </div>
     </aside>
+    <div id="special-offer">
+        <img src="assets/discount.svg" alt="">
+        <p>Цього тижня на все</p>
+        <p id="discount">-20%</p>
+    </div>
 </body>
 </html>
