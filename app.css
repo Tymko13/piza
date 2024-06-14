@@ -38,10 +38,6 @@ table {
 	border-spacing: 0;
 }
 
-:root {
-	
-}
-
 body {
 	display: flex;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -70,6 +66,7 @@ header {
 	height: 5em;
 	justify-content: space-evenly;
 	background: rgba(0,0,0,0.75);
+	z-index: 1;
 }
 
 #logo{
@@ -227,21 +224,31 @@ h2.pizza-name {
 	flex: 1;
 }
 
+.pizza-ingredients::first-letter{
+	text-transform: capitalize;
+}
+
 .pricing {
 	display: flex;
 	width: 90%;
 	height: 8em;
-	div {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
 	.diameter,
 	.weight {
 		margin: 0;
 		text-align: center;
 	}
+}
+
+.pizza-big,
+.pizza-small {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.none {
+	display: none;
 }
 
 .price {
@@ -276,6 +283,26 @@ h2.pizza-name {
 
 .buy-button:hover {
 	font-size: 1.1em;
+}
+
+.popular, .new {
+	position: absolute;
+	color: white;
+	font-weight: bold;
+	padding: 0.5em 1em;
+	border-radius: 0.5em;
+	align-self: end;
+	translate: 0.5em -1em;
+}
+
+.popular {
+	content: "Популярна";
+	background-color: green;
+}
+
+.new{
+	content: "Нова";
+	background-color: brown;
 }
 
 footer {
