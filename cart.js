@@ -24,7 +24,6 @@ function createOrder(){
     return res;
 }
 
-localStorage.clear();
 loadOrderFromStorage();
 
 pizza_list.addEventListener("click", e => {
