@@ -2,6 +2,29 @@ const pizza_list = document.querySelector("#pizza-list");
 const order_list = document.querySelector("#order-list");
 const order_header = document.querySelector("#order-header");
 
+const confirm_order = document.querySelector("#order-confirm-button");
+confirm_order.addEventListener("click", function(){
+    const order = createOrder();
+    localStorage.setItem("order", JSON.stringify(order));
+    window.location.href = "table.html";
+});
+
+function createOrder(){
+    const res = [];
+    res.push(["Піца", "К-ть", "Ціна"]);
+
+    const pizzas = order_list.querySelectorAll(".order-item");
+    for(const pizza of pizzas){
+        const name = pizza.querySelector(".pizza-name").innerText;
+        const num = pizza.querySelector(".order-item-num").innerText;
+        const sum = pizza.querySelector(".order-item-price").innerText;
+        res.push([name, num, sum]);
+    }
+    if(res.length < 3) res.push(["","",""]);
+    return res;
+}
+
+localStorage.clear();
 loadOrderFromStorage();
 
 pizza_list.addEventListener("click", e => {
@@ -53,6 +76,7 @@ function loadOrderFromStorage(){
         const num = localStorage.getItem(pizza);
         addToCart(pizza_id, pizza_size, num);
     }
+    updateOrderPrice();
 }
 
 function updateStorage(){
