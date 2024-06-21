@@ -97,10 +97,10 @@ var pizza_info = [
         }
     },
     {
-        id:17,
+        id:5,
         icon:'assets/pizza_3.jpg',
         title: "Маргарита",
-        type: 'Вега піца',
+        type: 'Вегетаріанська піца',
         content: {
             cheese: ['сир моцарелла', 'сир домашній'],
             tomato: ['помідори'],
@@ -113,7 +113,7 @@ var pizza_info = [
         }
     },
     {
-        id:43,
+        id:6,
         icon:'assets/pizza_6.jpg',
         title: "Мікс смаків",
         type: 'М’ясна піца',
@@ -136,7 +136,7 @@ var pizza_info = [
         }
     },
     {
-        id:90,
+        id:7,
         icon:'assets/pizza_8.jpg',
         title: "Дольче Маре",
         type: 'Морська піца',
@@ -152,7 +152,7 @@ var pizza_info = [
         }
     },
     {
-        id:6,
+        id:8,
         icon:'assets/pizza_4.jpg',
         title: "Россо Густо",
         type: 'Морська піца',

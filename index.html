@@ -32,12 +32,12 @@
                 <div class="circle-num">8</div>
             </div>
             <nav id="filters">
-                <p class="active">Усі</p>
-                <p>М'ясні</p>
-                <p>З ананасами</p>
-                <p>З грибами</p>
-                <p>З морепродуктами</p>
-                <p>Вегетаріанські</p>
+                <p data-filter="all" class="active">Усі</p>
+                <p data-filter="meat">М'ясні</p>
+                <p data-filter="pineapple">З ананасами</p>
+                <p data-filter="mushroom">З грибами</p>
+                <p data-filter="fish">З морепродуктами</p>
+                <p data-filter="vega">Вегетаріанські</p>
             </nav>
             <div id="pizza-list"></div>
         </section>
@@ -50,33 +50,15 @@
         <div id="order-header">
             <div id="order-name">
                 <h4>Замовлення</h4>
-                <div class="circle-num" id="order-num">1</div>
+                <div class="circle-num" id="order-num">0</div>
             </div>
             <button id="clear-order-button">Очистити замовлення</button>
         </div>
-        <div id="order-list">
-            <section class="order-item">
-                <div class="order-item-info">
-                    <h4 class="pizza-name">BBQ (Мала)</h4>
-                    <div class="pizza-size">
-                        <p class="diameter">&empty; 30</p>
-                        <p class="weight">&#9878; 460</p>
-                    </div>
-                    <div class="act">
-                        <p>556грн</p>
-                        <button class="dec">&#8722;</button>
-                        <p class="order-item-num">4</p>
-                        <button class="inc">+</button>
-                        <button class="delete-order-item-button">&#10539;</button>
-                    </div>
-                </div>
-                <img class="order-pic" src="assets/pizza_2.jpg" alt="Вид згори на половину запашної піци">
-            </section>
-        </div>
+        <div id="order-list"></div>
         <div id="order-confirm">
             <div id="full-order-info">
                 <p>Сума замовлення</p>
-                <p id="order-sum">556 грн</p>
+                <p id="order-sum">0 грн</p>
             </div>
             <button id="order-confirm-button">Замовити</button>
         </div>
@@ -88,6 +70,7 @@
     </div>
 
     <script src="pizza_list.js"></script>
-    <script src="app.js"></script>
+    <script src="createList.js"></script>
+    <script src="cart.js"></script>
 </body>
 </html>
